@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Resume builder demo</title>
+  <title>letstakealook</title>
   <link rel="stylesheet" href="/styles.css">
   <script type="module" src="/app.js"></script>
 </head>
@@ -56,6 +56,159 @@
       <footer class="resume-footer">Built with fictional data for a learning demo.</footer>
     </section>
   </main>
+
+
+  <!-- Start of our code -->
+  <main>
+    <main class="container">
+            <section class="intro">
+                <p class="topper">The day starts with you</p>
+                <h1 style="font-family: &quot;Sora&quot;, sans-serif">Color your thoughts</h1>
+                <p class="subtitle">How do you feel?</p>
+            </section>
+
+            <section class="selection-section">
+                <div class="section-heading">
+                    <h2>What does your heart say? What about your mind?</h2>
+                </div>
+
+                <p style="font-family: &quot;Sora&quot;, sans-serif" class="helper-text">Sometimes we surprise ourselves everyday...</p>
+
+                <div class="notes-grid" id="notes-grid">
+                    <button
+                        style="background-color: #f75151;"
+                        class="note note-1"
+                        data-color="#F29B91"
+                        aria-label="Select red"
+                        aria-pressed="false">
+                      
+                    </button>
+
+                    <button
+                        style="background-color: #ffa154;"
+                        class="note note-2"
+                        data-color="#ffa154"
+                        aria-label="Select orange"
+                        aria-pressed="false">
+                      
+                    </button>
+
+                    <button
+                        style="background-color: #ffeb8b;"
+                        class="note note-3"
+                        data-color="#ffeb8b"
+                        aria-label="Select yellow"
+                        aria-pressed="false">
+                      
+                    </button>
+
+                    <button
+                        style="background-color: #9adca0;"
+                        class="note note-4"
+                        data-color="#9adca0"
+                        aria-label="Select green"
+                        aria-pressed="false">
+                      
+                    </button>
+
+                    <button
+                        style="background-color: #585eb2;"
+                        class="note note-5"
+                        data-color="#585eb2"
+                        aria-label="Select blue"
+                        aria-pressed="false">
+                      
+                    </button>
+
+                    <button
+                        style="background-color: #b072c7;"
+                        class="note note-6"
+                        data-color="#b072c7"
+                        aria-label="Select purple"
+                        aria-pressed="false">
+                      
+                    </button>
+
+                    <button
+                        style="background-color: #ffa2da;"
+                        class="note note-7"
+                        data-color="#ffa2da"
+                        aria-label="Select pink"
+                        aria-pressed="false">
+                      
+                    </button>
+
+                    <button
+                        style="background-color: #4c4848;"
+                        class="note note-8"
+                        data-color="#4c4848"
+                        aria-label="Select black"
+                        aria-pressed="false">
+                      
+                    </button>
+
+                    <button
+                        style="background-color: #e6e6e6;"
+                        class="note note-9"
+                        data-color="#e6e6e6"
+                        aria-label="Select white"
+                        aria-pressed="false">
+                    
+                    </button>
+                </div>
+
+                <p class="selection-hint" id="selection-hint">There's no need for labels here</p>
+            </section>
+
+            <section class="writing-section">
+                <div class="section-heading">
+                    <h2 style="font-family: &quot;Sora&quot;, sans-serif">In your 'write' mind</h2>
+                    <span style="font-family: &quot;Sora&quot;, sans-serif" class="optional"
+                        >Write your thoughts away</span
+                    >
+                </div>
+
+                <p class="helper-text"><br /></p>
+
+                <textarea id="feeling-note" placeholder="Today feels like..." maxlength="2000"></textarea>
+
+                <!-- CHEEKY FIELD -->
+                <div class="field">
+                  <label for="accomplishment">Accomplishment</label>
+                  <textarea id="accomplishment" name="accomplishment" placeholder="Today feels like..." maxlength="2000" aria-describedby="accomplishment-error"></textarea>
+                  <span class="error" id="accomplishment-error"></span>
+                </div>
+
+                <div class="text-footer">
+                    <span>Just for this moment.</span>
+                    <span id="character-count">0 / 2000</span>
+                </div>
+            </section>
+
+            <section class="save-section">
+                <button id="save-button" class="save-button">Let's have a thought</button>
+                <p id="status-message" role="status" aria-live="polite">Here comes a thought that might alarm you</p>
+            </section>
+
+            <section class="prev-section">
+                <div class="section-heading prev-heading">
+                    <div>
+                        <p class="eyebrow">Rewind, and unwind</p>
+                        <h2>Recall those moments</h2>
+                    </div>
+
+                    <button id="refresh-button" class="refresh-button">↻ Refresh</button>
+                </div>
+
+                <div id="prev-list" class="prev-list">
+                    <p class="empty-state">Do you remember these little things?</p>
+                </div>
+            </section>
+        </main>
+  </main>
+
+
+
   <template id="resume-item-template">
     <article class="experience">
       <div class="experience-heading"><h3 class="job-title"></h3><p class="dates"></p></div>
